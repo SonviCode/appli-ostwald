@@ -1,0 +1,42 @@
+*,
+::after,
+::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'open-sans';
+    src: url(../../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'open-sans-light';
+    src: url(../../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: 'open-sans-bold';
+    src: url(../../fonts/OpenSans-Bold.ttf);
+}
+
+body {
+    font-family: 'open-sans';
+    background-color: #f2f2f2;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input,
+button {
+    font-family: 'open-sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

@@ -1,0 +1,331 @@
+@charset "UTF-8";
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'open-sans';
+  src: url(../../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'open-sans-light';
+  src: url(../../fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
+  font-family: 'open-sans-bold';
+  src: url(../../fonts/OpenSans-Bold.ttf);
+}
+
+body {
+  font-family: 'open-sans';
+  background-color: #f2f2f2;
+  height: 100vh;
+  overflow: hidden;
+}
+
+input,
+button {
+  font-family: 'open-sans';
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*--------------------- Media queries----------------------*/
+.title-intro {
+  padding: 150px 10% 100px;
+  text-align: center;
+  color: #174f83;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'open-sans-light';
+}
+
+@media screen and (max-width: 768px) {
+  .title-intro {
+    padding: 50px 10% 0;
+  }
+}
+
+.title-intro h1 {
+  font-size: clamp(34px, 5vw, 42px);
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+.title-intro h1 span {
+  color: #174f83;
+  font-family: 'open-sans-bold';
+}
+
+.title-intro h2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.6s ease-out forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .title-intro h2 {
+    display: none;
+  }
+}
+
+.email {
+  padding: 0px 10%;
+}
+
+@media screen and (max-width: 1043px) {
+  .email {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .email {
+    height: 100%;
+  }
+}
+
+.email .container-email {
+  width: 80%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1043px) {
+  .email .container-email {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.email img {
+  max-width: 550px;
+  width: 70%;
+  position: absolute;
+  left: -180px;
+  top: -130px;
+  min-width: 350px;
+  transition: 0.4;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: apparition 0.6s 1.8s ease-out forwards;
+}
+
+@media screen and (max-width: 1043px) {
+  .email img {
+    left: 10px;
+    top: -100px;
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .email img {
+    left: 200px;
+    top: -140px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .email img {
+    left: auto;
+    right: -10px;
+    top: -140px;
+  }
+}
+
+.email .disponibilité {
+  color: #4f4f4f;
+  text-align: right;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.4s 1.4s ease-out forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .email .disponibilité {
+    text-align: left;
+    padding: 10%;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .email .disponibilité {
+    margin-bottom: 100px;
+  }
+}
+
+.email .background-email {
+  background-color: #175085;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateX(30px);
+  animation: apparition 0.4s 1.0s ease-out forwards;
+}
+
+@media screen and (max-width: 768px) {
+  .email .background-email {
+    height: 100%;
+    align-items: center;
+    padding: 100px 0 250px;
+  }
+}
+
+.email .background-email p {
+  color: #f2f2f2;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .email .background-email p {
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.email .background-email .email-form {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .email .background-email .email-form {
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+  }
+}
+
+.email .background-email .email-form input {
+  padding: 10px 15px;
+  width: 250px;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .email .background-email .email-form input {
+    width: 100%;
+  }
+}
+
+.email .background-email .email-form button {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  background-color: #face00;
+  border-radius: 3px;
+  color: #174f83;
+}
+
+@media screen and (max-width: 768px) {
+  .email .background-email .email-form button {
+    width: 100%;
+  }
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+}
+
+footer .mention-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .mention-footer hr {
+  background-color: #4f4f4f;
+  width: 30%;
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+footer .mention-footer p {
+  color: #4f4f4f;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    display: none;
+  }
+}
+
+.merci {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 150px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.merci hr {
+  width: 80%;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+
+.merci .title-merci h1 {
+  color: #174f83;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.merci .title-merci p {
+  color: #174f83;
+  font-family: 'open-sans-light';
+}
+
+.merci .lien-merci p {
+  color: #4f4f4f;
+  margin-bottom: 20px;
+}
+
+.merci .lien-merci a {
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  background-color: #face00;
+  border-radius: 3px;
+  color: #174f83;
+}

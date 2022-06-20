@@ -1,0 +1,46 @@
+.merci {
+
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+    hr {
+        width: 80%;
+        margin: 0 auto;
+        opacity: 0.5;
+    }
+
+    .title-merci {
+        h1 {
+            color: #174f83;
+            font-size: 60px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #174f83;
+            font-family: 'open-sans-light';
+        }
+    }
+
+    .lien-merci {
+        p {
+            color: #4f4f4f;
+            margin-bottom: 20px;
+        }
+
+        a {
+            padding: 10px 25px;
+            border: none;
+            outline: none;
+            background-color: #face00;
+            border-radius: 3px;
+            color: #174f83;
+        }
+    }
+}
